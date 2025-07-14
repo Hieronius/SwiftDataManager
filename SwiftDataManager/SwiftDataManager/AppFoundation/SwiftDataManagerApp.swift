@@ -8,10 +8,14 @@
 import SwiftUI
 
 @main
+@MainActor
 struct SwiftDataManagerApp: App {
+	
+	var compositionRoot = CompositionRoot()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+			compositionRoot.buildMainView()
         }
     }
 }
